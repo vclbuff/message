@@ -1,6 +1,9 @@
 $gray: gray;
 $basePadding: 8px;
+$headerHeight: 80px;
+$footerHeight: 40px;
 $cBlack: #222;
+$cGray: #ccc;
 
 @mixin maxWidth() {
   max-width: 1280px;

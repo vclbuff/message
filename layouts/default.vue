@@ -1,10 +1,16 @@
 <template>
-  <div>
+  <div class="wrap">
     <OrganismsHeader
       :title="title"
       :items="items"
     />
-    <Nuxt />
+    <main class="main">
+      <Nuxt />
+    </main>
+    <OrganismsFooter
+      :copyright="copyright"
+      class="footer"
+    />
   </div>
 </template>
 
@@ -18,13 +24,14 @@ export default {
           text: 'Help',
           to: '/help'
         }
-      ]
+      ],
+      copyright: '©vclbuff'
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -190,5 +197,21 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.wrap {
+  min-height: 100vh;
+}
+
+.main {
+  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  height: $footerHeight;
+  background-color: $cBlack;
+  color: white;
 }
 </style>

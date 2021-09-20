@@ -42,6 +42,7 @@ export default {
 .header {
   background-color: $cBlack;
   color: white;
+  height: $headerHeight;
 }
 
 .header__content {
