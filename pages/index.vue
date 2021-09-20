@@ -1,14 +1,11 @@
 <template>
   <div class="dm">
-    <h1>
-      Messages
-    </h1>
     <div class="dm__inner">
       <OrganismsRoomList
         :items="dmList"
         class="dm__room"
       />
-      <OrganismsRoomMessages
+      <OrganismsMessages
         class="dm__messages"
       />
     </div>
@@ -27,15 +24,15 @@ export default {
     this.dmList = [
       {
         username: 'usera',
-        lastMessage: 'Hello'
+        lastMessage: 'Hello from usera'
       },
       {
         username: 'userb',
-        lastMessage: 'Hello'
+        lastMessage: 'Hello from userb'
       },
       {
         username: 'userb',
-        lastMessage: 'Hello'
+        lastMessage: 'Hello from userc'
       }
     ]
     this.messages = [

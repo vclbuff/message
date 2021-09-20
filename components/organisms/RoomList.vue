@@ -5,7 +5,12 @@
       :key="item.username"
       class="room__item"
     >
-      {{ item.username }}
+      <p class="user__name">
+        {{ item.username }}
+      </p>
+      <p class="user__message">
+        {{ item.lastMessage }}
+      </p>
     </li>
   </ul>
 </template>
@@ -30,5 +35,17 @@ export default {
 .room__item {
   border-bottom: 1px solid $cGray;
   padding: $basePadding;
+}
+
+.user__name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user__message {
+  color: gray;
+  margin: 0;
+  text-align: right;
 }
 </style>
