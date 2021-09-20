@@ -1,0 +1,9 @@
+$gray: gray;
+$basePadding: 8px;
+$cBlack: #222;
+
+@mixin maxWidth() {
+  max-width: 1280px;
+  width: calc(100% - (#{$basePadding} * 2));
+  margin: 0 auto;
+}
